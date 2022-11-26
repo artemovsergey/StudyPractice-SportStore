@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\user\\Desktop\\SportStore\\SportStore\\SportStore.csproj": {}
+    "C:\\Users\\user\\Desktop\\StudentPractik\\SportStore\\SportStore\\SportStore.csproj": {}
   },
   "projects": {
-    "C:\\Users\\user\\Desktop\\SportStore\\SportStore\\SportStore.csproj": {
+    "C:\\Users\\user\\Desktop\\StudentPractik\\SportStore\\SportStore\\SportStore.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user\\Desktop\\SportStore\\SportStore\\SportStore.csproj",
+        "projectUniqueName": "C:\\Users\\user\\Desktop\\StudentPractik\\SportStore\\SportStore\\SportStore.csproj",
         "projectName": "SportStore",
-        "projectPath": "C:\\Users\\user\\Desktop\\SportStore\\SportStore\\SportStore.csproj",
+        "projectPath": "C:\\Users\\user\\Desktop\\StudentPractik\\SportStore\\SportStore\\SportStore.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user\\Desktop\\SportStore\\SportStore\\obj\\",
+        "outputPath": "C:\\Users\\user\\Desktop\\StudentPractik\\SportStore\\SportStore\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
