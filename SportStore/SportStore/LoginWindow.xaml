@@ -47,7 +47,8 @@
             </StackPanel>
 
             <StackPanel>
-                <Button Margin="0 10 0 0" Height="20" Content="Гость" />
+                <Button Margin="0 10 0 0" Height="20" Content="Гость"
+                        Click="guestButtonClick"/>
             </StackPanel>
 
             <StackPanel>

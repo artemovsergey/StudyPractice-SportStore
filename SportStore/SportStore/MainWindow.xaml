@@ -5,8 +5,51 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SportStore"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Главное меню"
+        Height="750"
+        Width="1200"
+        MinHeight="740"
+        MinWidth="1100"
+        MaxHeight="770"
+        MaxWidth="1250"
+        Name="mainWindowApp"
+        Icon="Resources/icon.ico"
+        WindowStartupLocation="CenterScreen">
+        
+        
+        
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="4*"/>
+        </Grid.RowDefinitions>
 
+
+        <Grid VerticalAlignment="Center" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="5*"/>
+            </Grid.ColumnDefinitions>
+
+            <StackPanel 
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Center"
+                        Grid.Column="0">
+                <Image Source="Resources/logo.png" Height="100" Width="100"/>
+            </StackPanel>
+
+            <StackPanel 
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Right"
+                        Grid.Column="1">
+
+                <TextBlock Name="statusUser" Margin="1" Text="Роль: Иванов Иван Иванович" Height="20" Width="300" TextAlignment="Center"/>
+                <Button Margin="1" Content="Выход" Height="20" Width="100"
+                        Click="exitButtonClick"/>
+
+            </StackPanel>
+
+        </Grid>
+        <ListView Grid.Row="1" Name="productListView" />
     </Grid>
 </Window>

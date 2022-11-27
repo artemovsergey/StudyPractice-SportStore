@@ -18,15 +18,38 @@ namespace SportStore
 {
     public partial class MainWindow : Window
     {
+        public MainWindow()
+        {
+            InitializeComponent();
+        }
+
         public MainWindow(User user)
         {
             InitializeComponent();
 
+
             using(SportStoreContext db = new SportStoreContext())
             {
-                MessageBox.Show($"{user.RoleNavigation.Name}: {user.Surname} {user.Name} {user.Patronymic}. \r\t");
+                if (user != null)
+                {
+                    MessageBox.Show($"{user.RoleNavigation.Name}: {user.Surname} {user.Name} {user.Patronymic}. \r\t");
+                }
+                else
+                {
+                    MessageBox.Show("Гость");
+                }
+
             }
 
         }
+
+        private void exitButtonClick(object sender, RoutedEventArgs e)
+        {
+            new LoginWindow().Show();
+            this.Close();
+        }
+
+
+
     }
 }

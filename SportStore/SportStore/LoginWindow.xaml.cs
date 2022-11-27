@@ -87,5 +87,10 @@ namespace SportStore
             loginButton.IsEnabled = true;
         }
 
+        private void guestButtonClick(object sender, RoutedEventArgs e)
+        {
+            new MainWindow(null).Show();
+            this.Close();
+        }
     }
 }
