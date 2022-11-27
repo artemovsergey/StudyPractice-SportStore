@@ -37,9 +37,51 @@ namespace SportStore
                 }
 
                 productlistView.ItemsSource = db.Products.ToList();
+
+                List<string> sortList = new List<string>() { "По возрастанию цены", "По убыванию цены" };
+                sortUserComboBox.ItemsSource = sortList.ToList();
+
+                List<string> filtertList = db.Products.Select(u => u.Manufacturer).Distinct().ToList();
+                filtertList.Insert(0, "Все производители");
+                filterUserComboBox.ItemsSource = filtertList.ToList();
+
             }
 
         }
+
+
+        private void sortUserComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            using (SportStoreContext db = new SportStoreContext())
+            {
+                if (sortUserComboBox.SelectedValue == "По убыванию цены")
+                {
+                    productlistView.ItemsSource = db.Products.OrderByDescending(u => u.Cost).ToList();
+                }
+
+                if (sortUserComboBox.SelectedValue == "По возрастанию цены")
+                {
+                    productlistView.ItemsSource = db.Products.OrderBy(u => u.Cost).ToList();
+                }
+            }
+        }
+
+
+        private void filterUserComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            using (SportStoreContext db = new SportStoreContext())
+            {
+                if (db.Products.Select(u => u.Manufacturer).Distinct().ToList().Contains(filterUserComboBox.SelectedValue) )
+                {
+                    productlistView.ItemsSource = db.Products.Where(u => u.Manufacturer == filterUserComboBox.SelectedValue).ToList();
+                }
+                else
+                {
+                    productlistView.ItemsSource = db.Products.ToList();
+                }
+            }
+        }
+
 
         private void exitButtonClick(object sender, RoutedEventArgs e)
         {

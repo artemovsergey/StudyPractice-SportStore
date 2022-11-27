@@ -28,7 +28,11 @@
         <Grid VerticalAlignment="Center" >
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition Width="5*"/>
+                
+                
             </Grid.ColumnDefinitions>
 
             <StackPanel 
@@ -38,10 +42,29 @@
                 <Image Source="Resources/logo.png" Height="100" Width="100"/>
             </StackPanel>
 
+
+            <StackPanel Margin="1" Grid.Column="1" VerticalAlignment="Center"
+                        HorizontalAlignment="Center">
+                <TextBlock Margin="1" Text="Сортировка" Height="20" Width="100"/>
+                <ComboBox Margin="1" Name="sortUserComboBox" Height="20" Width="150"
+                          SelectionChanged="sortUserComboBox_SelectionChanged"/>
+            </StackPanel>
+
+
+            <StackPanel Margin="1" Grid.Column="2" VerticalAlignment="Center"
+                        HorizontalAlignment="Center">
+                <TextBlock Margin="1" Text="Фильтр" Height="20" Width="100"/>
+                <ComboBox Margin="1" Name="filterUserComboBox" Height="20" Width="150"     
+                          SelectionChanged="filterUserComboBox_SelectionChanged"/>
+            </StackPanel>
+
+
+
+
             <StackPanel 
                         VerticalAlignment="Center"
                         HorizontalAlignment="Right"
-                        Grid.Column="1">
+                        Grid.Column="3">
 
                 <TextBlock Name="statusUser" Margin="1" Text="Роль: Иванов Иван Иванович" Height="20" Width="300" TextAlignment="Center"/>
                 <Button Margin="1" Content="Выход" Height="20" Width="100"
