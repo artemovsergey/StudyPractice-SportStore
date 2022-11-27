@@ -27,15 +27,16 @@ namespace SportStore
             {
                 if (user != null)
                 {
-                    MessageBox.Show($"{user.RoleNavigation.Name}: {user.Surname} {user.Name} {user.Patronymic}. \r\t");
+                    statusUser.Text = user.RoleNavigation.Name;
+                    //MessageBox.Show($"{user.RoleNavigation.Name}: {user.Surname} {user.Name} {user.Patronymic}. \r\t");
                 }
                 else
                 {
-                    MessageBox.Show("Гость");
+                    statusUser.Text = "Гость";
+                    //MessageBox.Show("Гость");
                 }
 
                 productlistView.ItemsSource = db.Products.ToList();
-
             }
 
         }
