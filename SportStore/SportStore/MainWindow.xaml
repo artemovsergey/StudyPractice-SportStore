@@ -78,6 +78,22 @@
 				                       Margin="0"
                                        FontSize="15"
 				                       />
+
+                        <Border BorderBrush="#FF498C51" BorderThickness="2">
+                            <Image 
+			                       HorizontalAlignment="Center"
+			                       Height="200"
+			                       Width="200"
+                                   ToolTip="{Binding Description}">
+
+                                <Image.Source>
+                                    <BitmapImage UriSource = "{Binding ImagePath}" CacheOption="OnLoad">
+                                    </BitmapImage>
+                                </Image.Source>
+                            </Image>
+                        </Border>
+
+
                         <TextBlock Text="{Binding ArticleNumber, StringFormat=Артикль: {0}}"
 
 				                       Margin="5 5"
