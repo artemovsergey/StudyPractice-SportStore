@@ -31,8 +31,9 @@
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="2*"/>
                 
                 
             </Grid.ColumnDefinitions>
@@ -68,15 +69,28 @@
                          TextChanged="searchBox_TextChanged" />
             </StackPanel>
 
+
+
             <StackPanel Margin="1"
                         VerticalAlignment="Center"
                         HorizontalAlignment="Center"
                         Grid.Column="4">
                 <TextBlock Margin="1"
-                           TextAlignment="Left"
+                           TextAlignment="Center"
                            Name="countProducts"
-                           Height="40" Width="150"
+                           Height="20" Width="150"
                            Text="Количество: "/>
+
+                <Button Margin="1"
+                            Name="сlearButton"
+                        
+                            Width="100"
+                            Height="20"
+                            Content="Очистить"
+                            Click="сlearButton_Click"
+                             />
+
+
             </StackPanel>
 
 
@@ -85,7 +99,7 @@
             <StackPanel 
                         VerticalAlignment="Center"
                         HorizontalAlignment="Center"
-                        Grid.Column="5">
+                        Grid.Column="6">
 
                 <TextBlock Name="statusUser" Margin="1" Text="Роль: Иванов Иван Иванович" Height="20" Width="200" TextAlignment="Center"/>
                 <Button Margin="1" Content="Выход" Height="20" Width="100"
