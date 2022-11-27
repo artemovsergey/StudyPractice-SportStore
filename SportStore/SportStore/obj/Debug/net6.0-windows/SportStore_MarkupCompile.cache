@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\user\Desktop\SportStore\SportStore\obj\Debug\net6.0-windows\
+C:\Users\user\Desktop\StudentPractik\SportStore\SportStore\obj\Debug\net6.0-windows\
 SportStore
 none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
-C:\Users\user\Desktop\SportStore\SportStore\App.xaml
-11407045341
+C:\Users\user\Desktop\StudentPractik\SportStore\SportStore\App.xaml
+2-216653475
 
-10-504817270
+11-1116123261
 2221589753828
-MainWindow.xaml;
+LoginWindow.xaml;MainWindow.xaml;
 
 False
 

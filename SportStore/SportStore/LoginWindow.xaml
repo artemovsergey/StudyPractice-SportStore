@@ -1,0 +1,54 @@
+﻿<Window x:Class="SportStore.LoginWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SportStore"
+        mc:Ignorable="d"
+        
+        Title="Авторизация" 
+        Height="350"
+        Width="400"
+        
+        MinHeight="340"
+        MinWidth="350"
+        
+        MaxHeight="400"
+        MaxWidth="450"
+        
+        Icon="Resources/icon.ico"
+        
+        WindowStartupLocation="CenterScreen">
+        
+    <Grid>
+        <StackPanel VerticalAlignment="Center"
+                    HorizontalAlignment="Center">
+            <StackPanel>
+                <Image Source="Resources/logo.png" Height="100" Width="100"/>
+            </StackPanel>
+
+            <StackPanel>
+                <TextBlock Margin="1" Height="20" Width="135" Text="Логин"/>
+                <TextBox Name="loginBox" Margin="1" Height="20" />
+            </StackPanel>
+
+            <StackPanel>
+                <TextBlock Margin="1" Height="20" Text="Пароль"/>
+                <PasswordBox Name="passwordBox" Margin="1" Height="20"/>
+            </StackPanel>
+
+            <StackPanel>
+                <Button Name="loginButton"
+                        Margin="0 10 0 0"
+                        Height="20"
+                        IsDefault="True"
+                        Content="Авторизация"/>
+            </StackPanel>
+
+            <StackPanel>
+                <Button Margin="0 10 0 0" Height="20" Content="Гость" />
+            </StackPanel>
+
+        </StackPanel>
+    </Grid>
+</Window>
