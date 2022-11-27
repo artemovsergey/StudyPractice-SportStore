@@ -48,12 +48,12 @@ namespace SportStore
                     }
                 }
 
-                User user = db.Users.Where(u => u.Login == loginBox.Text && u.Password == passwordBox.Password).FirstOrDefault() as User;
+                User user = db.Users.Where(u => u.Login == loginBox.Text && u.Password == passwordBox.Password).Include(u => u.RoleNavigation).FirstOrDefault() as User;
 
                 // admin
                 if (user != null && verify)
                 {
-                    new MainWindow().Show();
+                    new MainWindow(user).Show();
                     this.Close();
                 }
                 else
