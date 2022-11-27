@@ -18,11 +18,6 @@ namespace SportStore
 {
     public partial class MainWindow : Window
     {
-        public MainWindow()
-        {
-            InitializeComponent();
-        }
-
         public MainWindow(User user)
         {
             InitializeComponent();
@@ -38,6 +33,8 @@ namespace SportStore
                 {
                     MessageBox.Show("Гость");
                 }
+
+                productlistView.ItemsSource = db.Products.ToList();
 
             }
 

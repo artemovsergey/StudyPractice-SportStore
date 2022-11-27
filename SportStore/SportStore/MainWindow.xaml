@@ -50,6 +50,43 @@
             </StackPanel>
 
         </Grid>
-        <ListView Grid.Row="1" Name="productListView" />
+
+
+
+
+        <ListView Grid.Row ="1"
+	              x:Name="productlistView"
+	              ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                  HorizontalContentAlignment="Center">
+
+            <ListView.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapPanel Orientation="Horizontal"
+                               HorizontalAlignment="Center"/>
+                </ItemsPanelTemplate>
+            </ListView.ItemsPanel>
+
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Width="300">
+
+                        <TextBlock Text="{Binding Name}"
+				                       VerticalAlignment="Center"
+				                       TextAlignment="Center"
+				                       TextWrapping="Wrap"
+				                       HorizontalAlignment="Center"
+				                       Margin="0"
+                                       FontSize="15"
+				                       />
+                    </StackPanel>
+
+                </DataTemplate>
+            </ListView.ItemTemplate>
+
+        </ListView>
+
+
+
+
     </Grid>
 </Window>
