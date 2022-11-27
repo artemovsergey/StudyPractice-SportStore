@@ -45,6 +45,8 @@ namespace SportStore
                 filtertList.Insert(0, "Все производители");
                 filterUserComboBox.ItemsSource = filtertList.ToList();
 
+                countProducts.Text = $"Количество: {db.Products.Count()}";
+
             }
 
         }
@@ -150,7 +152,7 @@ namespace SportStore
 
                 productlistView.ItemsSource = currentProducts;
 
-                //countProducts.Text = $"Количество: {currentProducts.Count} из {db.Products.ToList().Count}";
+                countProducts.Text = $"Количество: {currentProducts.Count} из {db.Products.ToList().Count}";
 
             }
         }
