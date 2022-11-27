@@ -50,6 +50,20 @@
                 <Button Margin="0 10 0 0" Height="20" Content="Гость" />
             </StackPanel>
 
+            <StackPanel>
+                <TextBlock Name="captchaBlock"
+                           Margin="0 10 0 0">
+                    
+                    <TextBlock.Effect>
+                        <BlurEffect RenderingBias="Quality" KernelType="Box" Radius="0.5"/>
+                    </TextBlock.Effect>
+
+                </TextBlock>
+                
+                <TextBox Name="captchaBox"/>
+
+            </StackPanel>
+
         </StackPanel>
     </Grid>
 </Window>

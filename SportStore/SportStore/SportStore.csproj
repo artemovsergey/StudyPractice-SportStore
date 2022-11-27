@@ -38,8 +38,4 @@
     </Resource>
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Infrastucture\" />
-  </ItemGroup>
-
 </Project>
