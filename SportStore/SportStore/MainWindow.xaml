@@ -70,7 +70,7 @@
                 <DataTemplate>
                     <StackPanel Width="300">
 
-                        <TextBlock Text="{Binding Name}"
+                        <TextBlock Text="{Binding Name, StringFormat=Название: {0}}"
 				                       VerticalAlignment="Center"
 				                       TextAlignment="Center"
 				                       TextWrapping="Wrap"
@@ -78,6 +78,58 @@
 				                       Margin="0"
                                        FontSize="15"
 				                       />
+                        <TextBlock Text="{Binding ArticleNumber, StringFormat=Артикль: {0}}"
+
+				                       Margin="5 5"
+                                       FontSize="15"
+                                       />
+                        <!--
+                            <TextBlock Text="{Binding Description, StringFormat=Описание: {0}}"
+				                       Margin="5 5"
+                                       FontSize="15"
+                                       />
+                         -->
+
+                        <TextBlock Text="{Binding Category, StringFormat=Категория: {0}}"
+				                       Margin="5 5"
+                                       FontSize="15"
+                                       />
+                        <TextBlock Text="{Binding Manufacturer, StringFormat=Производитель: {0}}"
+				                       Margin="5 5"
+                                       FontSize="15"
+                                       />
+                        <TextBlock Text="{Binding Cost, StringFormat=Стоимость: {0}}"
+				                       Margin="5 5"
+                                       FontSize="15"
+                                       />
+                        <TextBlock Text="{Binding DiscountAmount, StringFormat=Скидка: {0}%}"
+				                       Margin="5 5"
+                                       FontSize="15"
+                                      />
+                        <TextBlock Text="{Binding QuantityInStock, StringFormat=Количество на складе: {0}}"
+				                       Margin="5 5"
+                                       FontSize="15"
+                                       />
+                        <TextBlock Text="{Binding Status, StringFormat= Статус: {0}}"
+				                       Margin="5 5"
+                                       FontSize="15"
+                                      />
+                        <TextBlock Text="{Binding MaxDiscount, StringFormat= Максимальная скидка: {0}}"
+				                       Margin="5 5"
+                                       FontSize="15"
+                                       />
+                        <TextBlock Text="{Binding Supplier, StringFormat= Поставщик: {0}}"
+				                       Margin="5 5"
+                                       FontSize="15"
+                                       />
+                        <TextBlock Text="{Binding Unit, StringFormat= Ед.измерения: {0}}"
+				                       Margin="5 5"
+                                       FontSize="15"
+                                       />
+
+
+
+
                     </StackPanel>
 
                 </DataTemplate>
