@@ -64,6 +64,13 @@ C:\Users\user\Desktop\SportStore\SportStore\obj\Debug\net6.0-windows\refint\Spor
 C:\Users\user\Desktop\SportStore\SportStore\obj\Debug\net6.0-windows\SportStore.pdb
 C:\Users\user\Desktop\SportStore\SportStore\obj\Debug\net6.0-windows\SportStore.genruntimeconfig.cache
 C:\Users\user\Desktop\SportStore\SportStore\obj\Debug\net6.0-windows\ref\SportStore.dll
+C:\Users\user\Desktop\StudentPractik\SportStore\SportStore\obj\Debug\net6.0-windows\SportStore.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\StudentPractik\SportStore\SportStore\obj\Debug\net6.0-windows\AddProductWindow.g.cs
+C:\Users\user\Desktop\StudentPractik\SportStore\SportStore\obj\Debug\net6.0-windows\LoginWindow.g.cs
+C:\Users\user\Desktop\StudentPractik\SportStore\SportStore\obj\Debug\net6.0-windows\MainWindow.g.cs
+C:\Users\user\Desktop\StudentPractik\SportStore\SportStore\obj\Debug\net6.0-windows\App.g.cs
+C:\Users\user\Desktop\StudentPractik\SportStore\SportStore\obj\Debug\net6.0-windows\SportStore_MarkupCompile.cache
+C:\Users\user\Desktop\StudentPractik\SportStore\SportStore\obj\Debug\net6.0-windows\SportStore_MarkupCompile.lref
 C:\Users\user\Desktop\StudentPractik\SportStore\SportStore\bin\Debug\net6.0-windows\SportStore.exe
 C:\Users\user\Desktop\StudentPractik\SportStore\SportStore\bin\Debug\net6.0-windows\SportStore.dll.config
 C:\Users\user\Desktop\StudentPractik\SportStore\SportStore\bin\Debug\net6.0-windows\SportStore.deps.json
@@ -113,12 +120,8 @@ C:\Users\user\Desktop\StudentPractik\SportStore\SportStore\bin\Debug\net6.0-wind
 C:\Users\user\Desktop\StudentPractik\SportStore\SportStore\bin\Debug\net6.0-windows\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
 C:\Users\user\Desktop\StudentPractik\SportStore\SportStore\bin\Debug\net6.0-windows\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 C:\Users\user\Desktop\StudentPractik\SportStore\SportStore\bin\Debug\net6.0-windows\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
-C:\Users\user\Desktop\StudentPractik\SportStore\SportStore\obj\Debug\net6.0-windows\SportStore.csproj.AssemblyReference.cache
-C:\Users\user\Desktop\StudentPractik\SportStore\SportStore\obj\Debug\net6.0-windows\LoginWindow.g.cs
-C:\Users\user\Desktop\StudentPractik\SportStore\SportStore\obj\Debug\net6.0-windows\MainWindow.g.cs
-C:\Users\user\Desktop\StudentPractik\SportStore\SportStore\obj\Debug\net6.0-windows\App.g.cs
-C:\Users\user\Desktop\StudentPractik\SportStore\SportStore\obj\Debug\net6.0-windows\SportStore_MarkupCompile.cache
-C:\Users\user\Desktop\StudentPractik\SportStore\SportStore\obj\Debug\net6.0-windows\SportStore_MarkupCompile.lref
+C:\Users\user\Desktop\StudentPractik\SportStore\SportStore\obj\Debug\net6.0-windows\App.baml
+C:\Users\user\Desktop\StudentPractik\SportStore\SportStore\obj\Debug\net6.0-windows\AddProductWindow.baml
 C:\Users\user\Desktop\StudentPractik\SportStore\SportStore\obj\Debug\net6.0-windows\LoginWindow.baml
 C:\Users\user\Desktop\StudentPractik\SportStore\SportStore\obj\Debug\net6.0-windows\MainWindow.baml
 C:\Users\user\Desktop\StudentPractik\SportStore\SportStore\obj\Debug\net6.0-windows\SportStore.g.resources
@@ -132,6 +135,3 @@ C:\Users\user\Desktop\StudentPractik\SportStore\SportStore\obj\Debug\net6.0-wind
 C:\Users\user\Desktop\StudentPractik\SportStore\SportStore\obj\Debug\net6.0-windows\SportStore.pdb
 C:\Users\user\Desktop\StudentPractik\SportStore\SportStore\obj\Debug\net6.0-windows\SportStore.genruntimeconfig.cache
 C:\Users\user\Desktop\StudentPractik\SportStore\SportStore\obj\Debug\net6.0-windows\ref\SportStore.dll
-C:\Users\user\Desktop\StudentPractik\SportStore\SportStore\obj\Debug\net6.0-windows\App.baml
-C:\Users\user\Desktop\StudentPractik\SportStore\SportStore\obj\Debug\net6.0-windows\AddProductWindow.g.cs
-C:\Users\user\Desktop\StudentPractik\SportStore\SportStore\obj\Debug\net6.0-windows\AddProductWindow.baml

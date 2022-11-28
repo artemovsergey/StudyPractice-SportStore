@@ -8,6 +8,10 @@
         
         Height="450"
         Width="800"
+        MinHeight="440"
+        MinWidth="790"
+        MaxHeight="460"
+        MaxWidth="810"
         
         Title="Добавление/редактирование товара"
         Icon="Resources/icon.ico"
@@ -158,9 +162,9 @@
                 <StackPanel>
                     <TextBlock  Margin="1"
                                 Height="20"
-                                Text="Макс.цена"/>
-                    <TextBox Name="maxcostBox" Margin="1" Height="20"
-                         Text="{Binding MaxCost}"/>
+                                Text="Макс.скидка"/>
+                    <TextBox Name="maxDiscountBox" Margin="1" Height="20"
+                         Text="{Binding MaxDiscount}"/>
                 </StackPanel>
 
             </StackPanel>

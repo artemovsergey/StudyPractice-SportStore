@@ -15,7 +15,7 @@ public partial class Product
 
     public decimal Cost { get; set; }
 
-    public byte? MaxDiscount { get; set; }
+    public decimal MaxDiscount { get; set; }
 
     public string Manufacturer { get; set; } = null!;
 
@@ -23,7 +23,7 @@ public partial class Product
 
     public string Category { get; set; } = null!;
 
-    public byte? DiscountAmount { get; set; }
+    public decimal DiscountAmount { get; set; }
 
     public int QuantityInStock { get; set; }
 
