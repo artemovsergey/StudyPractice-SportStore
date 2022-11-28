@@ -133,3 +133,5 @@ C:\Users\user\Desktop\StudentPractik\SportStore\SportStore\obj\Debug\net6.0-wind
 C:\Users\user\Desktop\StudentPractik\SportStore\SportStore\obj\Debug\net6.0-windows\SportStore.genruntimeconfig.cache
 C:\Users\user\Desktop\StudentPractik\SportStore\SportStore\obj\Debug\net6.0-windows\ref\SportStore.dll
 C:\Users\user\Desktop\StudentPractik\SportStore\SportStore\obj\Debug\net6.0-windows\App.baml
+C:\Users\user\Desktop\StudentPractik\SportStore\SportStore\obj\Debug\net6.0-windows\AddProductWindow.g.cs
+C:\Users\user\Desktop\StudentPractik\SportStore\SportStore\obj\Debug\net6.0-windows\AddProductWindow.baml

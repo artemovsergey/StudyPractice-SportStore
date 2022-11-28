@@ -22,6 +22,7 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
             <RowDefinition Height="4*"/>
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
 
@@ -210,6 +211,21 @@
             </ListView.ItemTemplate>
 
         </ListView>
+
+
+        <StackPanel Grid.Row="2"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center">
+
+            <StackPanel Orientation="Horizontal"
+                        HorizontalAlignment="Center">
+
+                <Button Name="addUser" Margin="1"
+                            Content="Добавить товар" Height="20" Width="100"
+                            Click="addUserButtonClick"/>
+            </StackPanel>
+
+        </StackPanel>
 
 
 

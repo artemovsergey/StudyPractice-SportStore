@@ -1,0 +1,231 @@
+﻿<Window x:Class="SportStore.AddProductWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SportStore"
+        mc:Ignorable="d"
+        
+        Height="450"
+        Width="800"
+        
+        Title="Добавление/редактирование товара"
+        Icon="Resources/icon.ico"
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <StackPanel Orientation="Horizontal"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center">
+
+            <StackPanel VerticalAlignment="Center"
+                        HorizontalAlignment="Center"
+                        Margin="10">
+
+                <StackPanel Name="idPanel">
+                    <TextBlock Margin="1"
+                               Height="20"
+                               Width="100"
+                               Text="Id"/>
+                    <TextBox Name="idBox"
+                             Margin="1"
+                             Height="20"
+                             IsReadOnly="True"
+                             Text="{Binding Id}"/>
+
+                </StackPanel>
+
+                <StackPanel>
+                    <TextBlock Margin="1" Height="20" Width="100" Text="Имя"/>
+                    <TextBox Name="nameBox"
+                             Margin="1"
+                             Height="20"
+                             Text="{Binding Name}"/>
+                </StackPanel>
+
+                <StackPanel>
+                    <TextBlock  Margin="1"
+                                Height="20"
+                                Text="Категория"/>
+                    <ComboBox Name="categoryBox"
+                              Margin="1"
+                              Height="20"
+                              Width="100"
+                              SelectedValue="{Binding Category}"/>
+                </StackPanel>
+
+                <StackPanel>
+                    <TextBlock  Margin="1"
+                                Height="20"
+                                Text="Производитель"/>
+                    <TextBox Name="manufacturerBox"
+                             Margin="1"
+                             Height="20"
+                             Text="{Binding Manufacturer}"/>
+                </StackPanel>
+
+                <StackPanel>
+                    <TextBlock  Margin="1"
+                                Height="20"
+                                Text="Стоимость"/>
+                    <TextBox Name="costBox"
+                             Margin="1"
+                             Height="20">
+                        <TextBox.Text>
+                            <Binding Path="Cost">
+                                <Binding.ValidationRules>
+                                    <ExceptionValidationRule />
+                                    <DataErrorValidationRule />
+                                </Binding.ValidationRules>
+                            </Binding>
+                        </TextBox.Text>
+
+                    </TextBox>
+
+                </StackPanel>
+
+                <StackPanel>
+                    <TextBlock  Margin="1"
+                                Height="20"
+                                Text="Скидка"/>
+                    <TextBox Name="discountAmountBox" Margin="1" Height="20"
+                         Text="{Binding DiscountAmount}"/>
+
+
+                </StackPanel>
+
+            </StackPanel>
+
+
+            <StackPanel Margin="10"
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Center">
+
+
+                <StackPanel>
+                    <TextBlock Margin="1"
+                               Height="20"
+                               Width="100"
+                               Text="Артикль"/>
+                    <TextBox Name="articleBox"
+                             Margin="1"
+                             Height="20"
+                             Text="{Binding ArticleNumber}"/>
+                </StackPanel>
+
+
+                <StackPanel>
+                    <TextBlock  Margin="1"
+                                Height="20"
+                                Text="Поставщик"/>
+                    <TextBox Name="supplierBox" Margin="1" Height="20" Width="100"
+                         Text="{Binding Supplier}"/>
+                </StackPanel>
+
+                <StackPanel>
+                    <TextBlock  Margin="1"
+                                Height="20"
+                                Text="Ед.измерения"/>
+                    <TextBox Name="unitBox" Margin="1" Height="20" Width="100"
+                         Text="{Binding Unit}"/>
+                </StackPanel>
+
+                <StackPanel>
+                    <TextBlock  Margin="1"
+                                Height="20"
+                                Text="Количество"/>
+                    <TextBox Name="quantityInStockBox"
+                             Margin="1"
+                             Height="20">
+                        <TextBox.Text>
+                            <Binding Path="QuantityInStock">
+                                <Binding.ValidationRules>
+                                    <DataErrorValidationRule />
+                                </Binding.ValidationRules>
+                            </Binding>
+                        </TextBox.Text>
+                    </TextBox>
+
+                </StackPanel>
+
+                <StackPanel>
+                    <TextBlock  Margin="1"
+                                Height="20"
+                                Text="Статус"/>
+                    <TextBox Name="statusBox" Margin="1" Height="20"
+                         Text="{Binding Status}"/>
+                </StackPanel>
+
+                <StackPanel>
+                    <TextBlock  Margin="1"
+                                Height="20"
+                                Text="Макс.цена"/>
+                    <TextBox Name="maxcostBox" Margin="1" Height="20"
+                         Text="{Binding MaxCost}"/>
+                </StackPanel>
+
+            </StackPanel>
+
+            <StackPanel Margin="10"
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Center">
+
+                <StackPanel>
+                    <TextBlock  Margin="1"
+                                Height="20"
+                                Text="Описание"/>
+                    <TextBox Name="descriptionBox"
+                             Margin="1"
+                             Height="200"
+                             Width="150"
+                             TextWrapping="Wrap"
+                             Text="{Binding Description}"
+                        />
+                    <Button Margin="0 10 0 0"
+                        Height="20"
+                        Content="Сохранить"
+                        Click="saveProductButtonClick"/>
+                </StackPanel>
+            </StackPanel>
+
+            <StackPanel Margin="10"
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Center">
+
+                <TextBlock  Margin="1" Height="20" Text="Фото"/>
+
+                <TextBox Name="imageBox"
+                         Margin="1"
+                         Height="20"
+                         IsReadOnly="True"
+                         Visibility="Collapsed"
+                         Text="{Binding Photo}"/>
+
+
+
+                <Border Margin="1"
+                        Height="200"
+                        Width="150"
+                        BorderBrush="#FF76E383"
+                        BorderThickness="2"
+                        >
+                    <Image Name="imageBoxPath"
+                           Margin="1"
+                           Source="{Binding ImagePath}">
+                    </Image>
+                </Border>
+
+
+
+
+
+                <Button Height="20"
+                        Margin="0 10 0 0"
+                        Content="Добавить"
+                        Click="AddImageToProduct"/>
+
+            </StackPanel>
+
+
+        </StackPanel>
+    </Grid>
+</Window>
