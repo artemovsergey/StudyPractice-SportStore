@@ -204,8 +204,6 @@
                          Visibility="Collapsed"
                          Text="{Binding Photo}"/>
 
-
-
                 <Border Margin="1"
                         Height="200"
                         Width="150"
