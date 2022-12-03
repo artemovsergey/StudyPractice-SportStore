@@ -33,7 +33,7 @@ namespace SportStore
 
             using (SportStoreContext db = new SportStoreContext())
             {
-                categoryBox.ItemsSource = db.Products.Select(p => p.Category).Distinct().ToList();
+                categoryBox.ItemsSource = db.Products.Select(p => p.Category).Distinct().ToList();  
             }
 
             if(product != null)
@@ -41,7 +41,11 @@ namespace SportStore
                 currentProduct = product;
                 this.Title = "Редактирование товара";
                 DataContext= currentProduct;
-            }   
+            }
+            else
+            {
+                idPanel.Visibility = Visibility.Hidden;
+            }
         }
 
         private void saveProductButtonClick(object sender, RoutedEventArgs e)
@@ -150,6 +154,12 @@ namespace SportStore
 
                         MessageBox.Show("Продукт успешно добавлен!");
 
+
+                        MainWindow mainWindow = Application.Current.Windows.OfType<MainWindow>().FirstOrDefault();
+                        (mainWindow.FindName("productlistView") as ListView).ItemsSource = db.Products.ToList();
+                        (mainWindow.FindName("countProducts") as TextBlock).Text = $"Количество: {db.Products.Count()}";
+                        
+
                     }
                     catch (Exception ex)
                     {
@@ -206,6 +216,10 @@ namespace SportStore
                         db.Products.Update(currentProduct);
                         db.SaveChanges();
                         MessageBox.Show("Продукт успешно обновлен!");
+
+                        MainWindow mainWindow = Application.Current.Windows.OfType<MainWindow>().FirstOrDefault();
+                        (mainWindow.FindName("productlistView") as ListView).ItemsSource = db.Products.ToList();
+                        (mainWindow.FindName("countProducts") as TextBlock).Text = $"Количество: {db.Products.Count()}";
                     }
                     catch (Exception ex)
                     {
@@ -213,11 +227,9 @@ namespace SportStore
                     }
 
                 }
-
-
-
-
             }
+
+             
         }
 
         private void AddImageToProduct(object sender, RoutedEventArgs e)
