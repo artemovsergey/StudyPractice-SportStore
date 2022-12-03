@@ -29,6 +29,7 @@ namespace SportStore
         public AddProductWindow(Product product)
         {
             InitializeComponent();
+            this.Title = "Добавление товара";
 
             using (SportStoreContext db = new SportStoreContext())
             {
@@ -38,10 +39,9 @@ namespace SportStore
             if(product != null)
             {
                 currentProduct = product;
+                this.Title = "Редактирование товара";
                 DataContext= currentProduct;
-            }
-
-
+            }   
         }
 
         private void saveProductButtonClick(object sender, RoutedEventArgs e)

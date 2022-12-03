@@ -170,7 +170,7 @@ namespace SportStore
             filterUserComboBox.SelectedIndex = -1;
         }
 
-        private void addUserButtonClick(object sender, RoutedEventArgs e)
+        private void addProductButtonClick(object sender, RoutedEventArgs e)
         {
             new AddProductWindow(null).ShowDialog();
         }

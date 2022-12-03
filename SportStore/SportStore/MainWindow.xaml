@@ -227,9 +227,9 @@
             <StackPanel Orientation="Horizontal"
                         HorizontalAlignment="Center">
 
-                <Button Name="addUser" Margin="1"
+                <Button Name="addProduct" Margin="1"
                             Content="Добавить товар" Height="20" Width="100"
-                            Click="addUserButtonClick"/>
+                            Click="addProductButtonClick"/>
             </StackPanel>
 
         </StackPanel>
