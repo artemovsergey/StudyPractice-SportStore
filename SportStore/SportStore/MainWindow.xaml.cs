@@ -172,7 +172,15 @@ namespace SportStore
 
         private void addUserButtonClick(object sender, RoutedEventArgs e)
         {
-            new AddProductWindow().ShowDialog();
+            new AddProductWindow(null).ShowDialog();
+        }
+
+        private void EditProduct_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            Product p = (sender as ListView).SelectedItem as Product;
+            
+
+            new AddProductWindow(p).ShowDialog();
         }
     }
 }

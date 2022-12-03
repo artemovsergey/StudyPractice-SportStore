@@ -26,7 +26,7 @@ namespace SportStore
         string? newImage;
         string? newImagePath;
 
-        public AddProductWindow()
+        public AddProductWindow(Product product)
         {
             InitializeComponent();
 
@@ -34,6 +34,14 @@ namespace SportStore
             {
                 categoryBox.ItemsSource = db.Products.Select(p => p.Category).Distinct().ToList();
             }
+
+            if(product != null)
+            {
+                currentProduct = product;
+                DataContext= currentProduct;
+            }
+
+
         }
 
         private void saveProductButtonClick(object sender, RoutedEventArgs e)
@@ -113,7 +121,6 @@ namespace SportStore
 
                     db.Products.Add(product);
 
-                    // если фото не выбрано
                     if (String.IsNullOrEmpty(newImage))
                     {
                         product.Photo = "picture.png";
@@ -126,23 +133,16 @@ namespace SportStore
                         string newRelativePath = $"{System.DateTime.Now.ToString("HHmmss")}_{newImage}";
                         product.Photo = newRelativePath;
 
-                        //MessageBox.Show($"newImage: {newImage}");
-                        //MessageBox.Show($"newImagePath: {newImagePath}");
-                        //MessageBox.Show(File.Exists(newImagePath).ToString());
-
-                       
                         File.Copy(newImagePath, System.IO.Path.Combine(Environment.CurrentDirectory, $"images/{newRelativePath}"));
-
-                        
 
                         BitmapImage image = new BitmapImage(new Uri(product.ImagePath));
                         image.CacheOption = BitmapCacheOption.OnLoad;
+
                         imageBoxPath.Source = image;
                     }
-             
 
                     db.SaveChanges();
-                    
+
                     MessageBox.Show("Продукт успешно добавлен!");
 
                 }
@@ -153,9 +153,6 @@ namespace SportStore
 
 
             }
-
-        
-
         }
 
         private void AddImageToProduct(object sender, RoutedEventArgs e)
@@ -165,7 +162,7 @@ namespace SportStore
 
             if (currentProduct != null)
             {
-                oldImage = System.IO.Path.Combine(Environment.CurrentDirectory, $"images/{imageBox.Text}");
+                oldImage = System.IO.Path.Combine(Environment.CurrentDirectory, $"images/{currentProduct.Photo}");
             }
             else
             {
@@ -176,7 +173,6 @@ namespace SportStore
 
             Microsoft.Win32.OpenFileDialog dlg = new Microsoft.Win32.OpenFileDialog();
 
-
             if (dlg.ShowDialog() == true)
             {
                 if ((myStream = dlg.OpenFile()) != null)
@@ -186,20 +182,18 @@ namespace SportStore
                     dlg.Title = "Open Image";
                     dlg.InitialDirectory = "./";
 
-
                     // Предпросмотр изображения
                     BitmapImage image = new BitmapImage();
                     image.BeginInit();
                     image.CacheOption = BitmapCacheOption.OnLoad;
                     image.CreateOptions = BitmapCreateOptions.IgnoreImageCache;
                     image.UriSource = new Uri(dlg.FileName);
-                    image.EndInit();
                     
-
                     //MessageBox.Show($"Изображения: {image.Width} на {image.Height} пикселей. Размер будет приведен к 200 на 300 пикселей! ");
                     image.DecodePixelWidth = 200;
                     image.DecodePixelHeight = 300;
                     imageBoxPath.Source = image;
+                    image.EndInit();
 
                     try
                     {
@@ -220,14 +214,9 @@ namespace SportStore
                 myStream.Dispose();
             }
 
-            MessageBox.Show($"Старое изображение: {oldImage} \n Новое изображение: {newImage} ");
+            //MessageBox.Show($"Старое изображение: {oldImage} \n Новое изображение: {newImage} ");
 
         }
-            
-
-           
-
-           
-            
+                
     }
 }

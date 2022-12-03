@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 
 namespace SportStore.Models;
 
@@ -32,7 +33,21 @@ public partial class Product
     public string Photo { get; set; } = null!;
 
 
-    public virtual string? ImagePath { get { return System.IO.Path.Combine(Environment.CurrentDirectory, $"images/{Photo}"); } }
+    public virtual string? ImagePath { 
+        
+        get {
+            if (File.Exists(System.IO.Path.Combine(Environment.CurrentDirectory, $"images/{Photo}")))
+            {
+                return System.IO.Path.Combine(Environment.CurrentDirectory, $"images/{Photo}");
+            }
+            else
+            {
+                Photo = "picture.png";
+                return null;
+            }
+        }
+    
+    }
 
     public string Status { get; set; } = null!;
 

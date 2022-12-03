@@ -116,7 +116,9 @@
         <ListView Grid.Row ="1"
 	              x:Name="productlistView"
 	              ScrollViewer.HorizontalScrollBarVisibility="Disabled"
-                  HorizontalContentAlignment="Center">
+                  HorizontalContentAlignment="Center"
+                  MouseDoubleClick="EditProduct_MouseDoubleClick"
+                  >
 
             <ListView.ItemsPanel>
                 <ItemsPanelTemplate>
@@ -146,8 +148,13 @@
                                    ToolTip="{Binding Description}">
 
                                 <Image.Source>
-                                    <BitmapImage UriSource = "{Binding ImagePath}" CacheOption="OnLoad">
+                                    <BitmapImage UriSource = "{Binding ImagePath,TargetNullValue=Resources/picture.png}"
+                                                 CacheOption="OnLoad"
+                                                 CreateOptions="IgnoreImageCache"
+                                                 
+                                                 >
                                     </BitmapImage>
+
                                 </Image.Source>
                             </Image>
                         </Border>

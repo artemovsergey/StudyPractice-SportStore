@@ -212,6 +212,7 @@
                         >
                     <Image Name="imageBoxPath"
                            Margin="1"
+                           
                            Source="{Binding ImagePath}">
                     </Image>
                 </Border>
