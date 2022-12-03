@@ -16,8 +16,6 @@
         Icon="Resources/icon.ico"
         WindowStartupLocation="CenterScreen">
         
-        
-        
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
@@ -90,12 +88,7 @@
                             Content="Очистить"
                             Click="сlearButton_Click"
                              />
-
-
             </StackPanel>
-
-
-
 
             <StackPanel 
                         VerticalAlignment="Center"
@@ -109,9 +102,6 @@
             </StackPanel>
 
         </Grid>
-
-
-
 
         <ListView Grid.Row ="1"
 	              x:Name="productlistView"
@@ -225,17 +215,20 @@
                     HorizontalAlignment="Center">
 
             <StackPanel Orientation="Horizontal"
-                        HorizontalAlignment="Center">
+                        HorizontalAlignment="Center"
+                        >
 
-                <Button Name="addProduct" Margin="1"
+                <Button Name="addProduct" Margin="5"
                             Content="Добавить товар" Height="20" Width="100"
                             Click="addProductButtonClick"/>
+
+                <Button Name="deleteUser" Margin="5"
+                            Content="Удалить товар" Height="20" Width="100"
+                            Click="delUserButton"/>
+
             </StackPanel>
 
         </StackPanel>
-
-
-
 
     </Grid>
 </Window>
