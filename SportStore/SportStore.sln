@@ -5,7 +5,9 @@ VisualStudioVersion = 17.4.33103.184
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SportStore", "SportStore\SportStore.csproj", "{B70D68CA-E758-4B99-B5F1-018894558687}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SF2022UserLib", "SF2022UserLib\SF2022UserLib.csproj", "{5E8D1F08-5F06-4F67-8739-D8D34366015F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SF2022UserLib", "SF2022UserLib\SF2022UserLib.csproj", "{5E8D1F08-5F06-4F67-8739-D8D34366015F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SF2022UserLib.Test", "SF2022UserLib.Test\SF2022UserLib.Test.csproj", "{FB71C3B4-047B-4D80-B262-FBC3CCDC03D4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{5E8D1F08-5F06-4F67-8739-D8D34366015F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5E8D1F08-5F06-4F67-8739-D8D34366015F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5E8D1F08-5F06-4F67-8739-D8D34366015F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB71C3B4-047B-4D80-B262-FBC3CCDC03D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB71C3B4-047B-4D80-B262-FBC3CCDC03D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB71C3B4-047B-4D80-B262-FBC3CCDC03D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB71C3B4-047B-4D80-B262-FBC3CCDC03D4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
