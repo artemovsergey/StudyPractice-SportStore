@@ -18,6 +18,7 @@ namespace SportStore
 {
     public partial class MainWindow : Window
     {
+        User? currentUser = null;
         public MainWindow(User user)
         {
             InitializeComponent();
@@ -27,8 +28,19 @@ namespace SportStore
             {
                 if (user != null)
                 {
-                    statusUser.Text = user.RoleNavigation.Name;
+                    currentUser = user;
+                    statusUser.Text = $"{user.RoleNavigation.Name}: {user.Surname} {user.Name} {user.Patronymic}. \r\t";
                     //MessageBox.Show($"{user.RoleNavigation.Name}: {user.Surname} {user.Name} {user.Patronymic}. \r\t");
+
+
+                    
+
+                    if (currentUser == null || currentUser.RoleNavigation.Name != "Администратор")
+                    {
+                        addProduct.Visibility = Visibility.Collapsed;
+                        deleteProduct.Visibility = Visibility.Collapsed;
+                    }
+
                 }
                 else
                 {
@@ -46,6 +58,16 @@ namespace SportStore
                 filterUserComboBox.ItemsSource = filtertList.ToList();
 
                 countProducts.Text = $"Количество: {db.Products.Count()}";
+
+
+
+
+                if (currentUser == null || currentUser.RoleNavigation.Name != "Администратор")
+                {
+                    addProduct.Visibility = Visibility.Collapsed;
+                    deleteProduct.Visibility = Visibility.Collapsed;
+                }
+
 
             }
 
@@ -177,10 +199,13 @@ namespace SportStore
 
         private void EditProduct_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-            Product p = (sender as ListView).SelectedItem as Product;
-            
 
-            new AddProductWindow(p).ShowDialog();
+            if (currentUser is not null && currentUser.RoleNavigation.Name == "Администратор")
+            {
+                Product p = (sender as ListView).SelectedItem as Product;
+                new AddProductWindow(p).ShowDialog();
+            }
+
         }
 
 

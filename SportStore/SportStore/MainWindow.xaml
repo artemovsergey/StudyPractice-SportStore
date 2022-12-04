@@ -222,7 +222,7 @@
                             Content="Добавить товар" Height="20" Width="100"
                             Click="addProductButtonClick"/>
 
-                <Button Name="deleteUser" Margin="5"
+                <Button Name="deleteProduct" Margin="5"
                             Content="Удалить товар" Height="20" Width="100"
                             Click="delUserButton"/>
 
